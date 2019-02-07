@@ -554,8 +554,7 @@
                             <small class="form-text text-muted">
                                 This is how others will learn about the project, so make it good!
                             </small>
-
-                            <div class="quill-editor" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor"></div>
+                            <InputQuill v-model="description"/>
 
 
                         </div>
@@ -704,48 +703,24 @@
 </template>
 
 <style lang="scss">
-    @import "~flatpickr/dist/themes/dark.css";
-    @import "~quill/dist/quill.core.css";
+    /* Style */
 </style>
 
 <script>
-    // commonjs
-    //const flatpickr = require("flatpickr");
+    import Flatpickr from "flatpickr";
+    import InputQuill from "../components/InputQuill";
 
-    // es modules are recommended, if available, especially for typescript
-    import flatpickr from "flatpickr";
-    import quill from "quill";
+    //import quill from "quill";
 
     export default {
         name: 'Form',
+        components: {InputQuill},
         props: {
-            msg: String
+            msg: String,
+            description: String
         },
         mounted() {
-            flatpickr(".flatpickr-input");
-            quill(".quill-editor");
+            Flatpickr(".flatpickr-input");
         }
     }
-
-    //import flatpickr from 'flatpickr/dist/flatpickr.min'
-
-    //console.log(Vue);
-
-    //import $ from 'jquery/dist/jquery.min'
-    //import 'bootstrap/dist/js/bootstrap.bundle.min'
-    //import 'chart.js/dist/Chart.min'
-    //import 'highlightjs/highlight.pack.min'
-    //import 'flatpickr/dist/flatpickr.min'
-    //import 'jquery-mask-plugin/dist/jquery.mask.min'
-    //import 'list.js/dist/list.min'
-    //import 'quill/dist/quill.min.js'
-    //import 'dropzone/dist/min/dropzone.min.js'
-    //import 'select2/dist/js/select2.min.js'
-    //import 'chart.js/Chart.extension.min.js'
-
-    //import $ from 'jquery/dist/jquery.min'
-    //import flatpickr from 'flatpickr/dist/flatpickr.min'
-
-    //this.$flatpickr()
-
 </script>

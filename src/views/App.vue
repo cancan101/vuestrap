@@ -1,19 +1,22 @@
 <template>
     <div id="app">
-        <menu-principal></menu-principal>
+        <menu-principal/>
 
         <div class="main-content">
+            <top-bar/>
             <router-view/>
         </div>
     </div>
 </template>
 
 <style lang="scss">
-    @import "~flatpickr/dist/themes/dark.css";
+
 </style>
 <script>
     import MenuPrincipal from "../components/MenuPrincipal";
+    import TopBar from "../components/TopBar";
+
     export default {
-        components: {MenuPrincipal}
+        components: {TopBar, MenuPrincipal}
     }
 </script>

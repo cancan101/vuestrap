@@ -57,11 +57,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Astuces
 
-### CSS Lien vers ressources avec ~ 
+### CSS Lien vers ressources  ~@/ => src/ 
 
-```css
+```scss
 @font-face {
-  font-family: "Roboto Light";
-  src: url("~@/assets/fonts/Roboto-Light.woff2") format("woff2");
+  font-family: 'Feather';
+  src:
+          url('~@/assets/fonts/feather/fonts/Feather.ttf?sdxovp') format('truetype'),
+          url('~@/assets/fonts/feather/fonts/Feather.woff?sdxovp') format('woff'),
+          url('~@/assets/fonts/feather/fonts/Feather.svg?sdxovp#Feather') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 ```

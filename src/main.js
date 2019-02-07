@@ -9,6 +9,17 @@
 // Librairies
 import Vue from 'vue' // Vue.js
 
+import 'jquery/dist/jquery.min'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+import 'chart.js/dist/Chart.min'
+import 'highlightjs/highlight.pack.min'
+import 'jquery-mask-plugin/dist/jquery.mask.min'
+//import 'list.js/dist/list.min'
+//import 'quill/dist/quill.min.js'
+//import 'dropzone/dist/min/dropzone.min.js'
+//import 'select2/dist/js/select2.min.js'
+//import 'chart.js/Chart.extension.min.js'
+
 // Importation des routes
 import router from './router.js'
 
