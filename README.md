@@ -51,9 +51,20 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Liens utiles
 
+* https://cli.vuejs.org/
+* https://cli.vuejs.org/guide/installation.html
+* https://forum.vuejs.org/t/loading-local-fonts-with-vue-cli-3/38967
+* https://www.chriscourses.com/blog/loading-fonts-webpack
 * https://css-tricks.com/how-to-import-a-sass-file-into-every-vue-component-in-an-app/
 * https://vuex.vuejs.org/guide/plugins.html
 * https://cli.vuejs.org/guide/html-and-static-assets.html#static-assets-handling
+* https://select2.org/getting-started/basic-usage
+* https://listjs.com/
+* https://quilljs.com/playground/
+* https://pineco.de/wrapping-quill-editor-in-a-vue-component/
+* https://github.com/monterail/vuelidate
+* https://baianat.github.io/vee-validate/examples/async-backend-validation.html
+
 
 ## Astuces
 
