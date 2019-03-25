@@ -6,6 +6,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Form from './views/Form.vue'
 import About from './views/About'
+import FormRich from "./views/FormRich";
 
 // Ajout module vue-routeur à l'application
 Vue.use(Router)
@@ -21,6 +22,11 @@ export default new Router({
         path: '/form',
         name: 'form',
         component: Form
+    },
+    {
+      path: '/formrich',
+      name: 'formrich',
+      component: FormRich
     },
     {
       path: '/about',

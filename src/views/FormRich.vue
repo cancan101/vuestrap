@@ -536,15 +536,113 @@
                     </div>
 
                     <!-- Form -->
-                    <form class="mb-4" action="https://kode.ch/getpost/" method="post">
+                    <form class="mb-4">
 
                         <!-- Project name -->
                         <div class="form-group">
                             <label>
                                 Project name
                             </label>
-                            <input name="projet_nom" type="text" class="form-control">
+                            <input type="text" class="form-control">
                         </div>
+
+                        <!-- Project description -->
+                        <div class="form-group">
+                            <label class="mb-1">
+                                Project description
+                            </label>
+                            <small class="form-text text-muted">
+                                This is how others will learn about the project, so make it good!
+                            </small>
+                            <InputQuill v-model="description"/>
+
+
+                        </div>
+
+                        <!-- Project tags -->
+                        <div class="form-group">
+                            <label>
+                                Project tags
+                            </label>
+                            <select class="form-control select2-hidden-accessible" data-toggle="select" multiple="" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                <option>CSS</option>
+                                <option>HTML</option>
+                                <option>JavaScript</option>
+                                <option>Bootstrap</option>
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 682.667px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+
+                                <!-- Start date -->
+                                <div class="form-group">
+                                    <label>
+                                        Start date
+                                    </label>
+                                    <input type="text" class="form-control flatpickr-input" data-toggle="flatpickr" readonly="readonly">
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-6">
+
+                                <!-- Start date -->
+                                <div class="form-group">
+                                    <label>
+                                        End date
+                                    </label>
+                                    <input type="text" class="form-control flatpickr-input" data-toggle="flatpickr" readonly="readonly">
+                                </div>
+
+                            </div>
+                        </div> <!-- / .row -->
+
+                        <!-- Divider -->
+                        <hr class="mt-4 mb-5">
+
+                        <!-- Project cover -->
+                        <div class="form-group">
+                            <label class="mb-1">
+                                Project cover
+                            </label>
+                            <small class="form-text text-muted">
+                                Please use an image no larger than 1200px * 600px.
+                            </small>
+                            <div class="dropzone dropzone-single mb-3 dz-clickable" data-toggle="dropzone" data-dropzone-url="http://">
+
+
+
+                                <div class="dz-preview dz-preview-single"></div>
+
+                                <div class="dz-default dz-message"><span>Drop files here to upload</span></div></div>
+                        </div>
+
+                        <!-- Divider -->
+                        <hr class="mt-5 mb-5">
+
+                        <!-- Starting files -->
+                        <div class="form-group">
+                            <label class="mb-1">
+                                Starting files
+                            </label>
+                            <small class="form-text text-muted">
+                                Upload any files you want to start the projust with.
+                            </small>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="dropzone dropzone-multiple dz-clickable" data-toggle="dropzone" data-dropzone-url="http://" data-dropzone-multiple="">
+
+
+
+                                        <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush"></ul>
+
+                                        <div class="dz-default dz-message"><span>Drop files here to upload</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <hr class="mt-5 mb-5">
 
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -558,7 +656,7 @@
                                         If you are available for hire outside of the current situation, you can encourage others to hire you.
                                     </small>
                                     <div class="custom-control custom-switch">
-                                        <input name="projet_prive" type="checkbox" class="custom-control-input" id="switchOne">
+                                        <input type="checkbox" class="custom-control-input" id="switchOne">
                                         <label class="custom-control-label" for="switchOne"></label>
                                     </div>
                                 </div>
@@ -588,9 +686,9 @@
                         <hr class="mt-5 mb-5">
 
                         <!-- Buttons -->
-                        <button type="submit" class="btn btn-block btn-primary">
+                        <a href="#" class="btn btn-block btn-primary">
                             Create project
-                        </button>
+                        </a>
                         <a href="#" class="btn btn-block btn-link text-muted">
                             Cancel this project
                         </a>
@@ -609,15 +707,18 @@
 </style>
 
 <script>
-
-    //import quill from "quill";
+    import Flatpickr from "flatpickr";
+    import InputQuill from "../components/InputQuill";
 
     export default {
-        name: 'Form',
-        components: {},
+        name: 'FormRich',
+        components: {InputQuill},
         props: {
             msg: String,
             description: String
+        },
+        mounted() {
+            Flatpickr(".flatpickr-input");
         }
     }
 </script>

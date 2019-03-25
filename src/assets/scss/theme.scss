@@ -1,14 +1,13 @@
 /**
- * Dashkit v1.3.2
+ * Dashkit v1.3.4
  *
  * Custom variables followed by Dashkit variables followed by Bootstrap variables
  * to ensure cascade of styles.
  */
 
-
 // Bootstrap functions
-@import '~bootstrap/scss/functions';
-//@import '../../../node_modules/~bootstrap/scss/functions';
+//@import '~bootstrap/scss/functions';
+@import '../../../node_modules/~bootstrap/scss/functions';
 
 // Custom variables
 @import 'user-variables';

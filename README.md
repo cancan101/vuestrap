@@ -68,7 +68,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Astuces
 
-### CSS Lien vers ressources  ~@/ => src/ 
+### Ajouter SCSS
+
+Ajouter les fichiers SCSS dans le fichier de configuration `vue.config.js`.
+
+```json
+module.exports = {
+    css: {
+        loaderOptions: {
+            sass: {
+                data: `@import "@/assets/scss/theme.scss";`
+            }
+        }
+    }
+};
+```
+
+### SCSS Lien vers ressources  ~@/ => src/ 
 
 ```scss
 @font-face {
